@@ -6,7 +6,7 @@ This Android application demonstrates a Two-Factor Authentication (2FA) system b
 
 - **User Signup:** Allows users to register with email, password, and personal details.
 - **Email Verification:** Sends a One-Time Password (OTP) to the user's email for verification.
-- **Secure Login:** Validates user credentials against a local SQLite database.
+- **Secure Login:** Validates user credentials against the database.
 - **Password Hashing:** Utilizes BCrypt for secure password storage.
 - **Resend OTP:** Allows users to request a new OTP if needed.
 
@@ -78,8 +78,8 @@ private static final String senderPassword = "your-email-app-password";
 ```gradle
 implementation 'org.mindrot:jbcrypt:0.4'
 ```
-- For sending emails. Add the following to your build.gradle file:
+- For sending emails, add the following to your build.gradle file:
 ```gradle
-    implementation("com.sun.mail:android-mail:1.6.7")
-    implementation("com.sun.mail:android-activation:1.6.7")
+implementation("com.sun.mail:android-mail:1.6.7")
+implementation("com.sun.mail:android-activation:1.6.7")
 ```

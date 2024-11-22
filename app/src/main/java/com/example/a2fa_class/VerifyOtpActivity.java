@@ -48,12 +48,14 @@ public class VerifyOtpActivity extends AppCompatActivity {
             Toast.makeText(this, "Please enter the OTP.", Toast.LENGTH_SHORT).show();
             return;
         }
-
         if (enteredOtp.equals(generatedOtp)) {
-            Toast.makeText(this, "OTP verified successfully. Your account is now created.", Toast.LENGTH_SHORT).show();
-            DB.insertData(firstName, lastName, email, password);
-            Intent intent = new Intent(VerifyOtpActivity.this, LoginActivity.class);
-            startActivity(intent);
+            if (DB.insertData(firstName, lastName, email, password)) {
+                Toast.makeText(this, "OTP verified successfully. Your account is now created.", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(VerifyOtpActivity.this, LoginActivity.class);
+                startActivity(intent);
+            } else {
+                Toast.makeText(this, "An error occurred while creating your account. Please try again.", Toast.LENGTH_SHORT).show();
+            }
         } else {
             Toast.makeText(this, "Invalid OTP. Please check your email and try again.", Toast.LENGTH_SHORT).show();
         }
