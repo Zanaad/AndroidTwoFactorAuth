@@ -72,12 +72,14 @@ private static final String senderPassword = "your-email-app-password";
 | `DB`                | Manages SQLite database operations like storing and validating user data.   |
 
 ## Dependencies
-- For password hashing. Add the following to your build.gradle file:
-  ```bash
- implementation("de.svenkubiak:jBCrypt:0.4.1")
+
+- For password hashing, add the following to your `build.gradle` file:
+
+```gradle
+implementation 'org.mindrot:jbcrypt:0.4'
 ```
 - For sending emails. Add the following to your build.gradle file:
-  ```bash
+```gradle
     implementation("com.sun.mail:android-mail:1.6.7")
     implementation("com.sun.mail:android-activation:1.6.7")
 ```
