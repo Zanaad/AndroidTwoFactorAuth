@@ -10,7 +10,6 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import java.security.SecureRandom;
-import java.util.Random;
 
 public class VerifyOtpActivity extends AppCompatActivity {
     private EditText otpEditText;
