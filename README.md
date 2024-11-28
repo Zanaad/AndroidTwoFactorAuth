@@ -25,14 +25,7 @@ This Android application demonstrates a Two-Factor Authentication (2FA) system b
 git clone https://github.com/Zanaad/AndroidTwoFactorAuth.git
 ```
 
-### 2. Open in Android Studio
-
-- Open **Android Studio** on your machine.
-- Click on **File > Open...** from the top menu.
-- Navigate to the folder where you cloned the repository and select it.
-- Wait for Android Studio to index the project and download any necessary dependencies.
-
-### 3. Enable Email OTP Functionality
+### 2. Enable Email OTP Functionality
 
 - Open the `OTPSender` class and update the following fields with your Gmail account details:
 
@@ -42,10 +35,10 @@ private static final String senderPassword = "your-email-app-password";
 ```
 - Make sure the Gmail account has "App Passwords" enabled. Refer to the [Google documentation](https://support.google.com/accounts/answer/185833?hl=en) for generating an app password.
 
-### 4. Run the App
+### 3. Run the App
 
 - Connect an Android device or use an emulator.
-- Click on **Run > Run 'app'** in Android Studio to build and install the application.
+- Build and run the application from Android Studio.
 
 ## Application Workflow
 
